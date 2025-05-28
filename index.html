@@ -21,7 +21,7 @@
       </select><br>
 
       <label>Tipo de ramo:</label>
-      <select name="tipoRamo" id="tipoRamo">
+      <select name="tipoRamo" id="tipoRamo" onchannge="mostrarColores()">
         <option value="1">1 color</option>
         <option value="2">2 colores</option>
         <option value="3">3 colores</option>
@@ -47,7 +47,7 @@
         <option value="no">No</option>
         <option value="si">Sí</option>
       </select>
-      <input type="text" id="frase" maxlength="50" style="display:none;" placeholder="Insert phrase">
+      <input type="text" id="frase" maxlength="50" style="display:none;" placeholder="Insert phrase / Inserte frase">
 
       <button type="submit">Enviar pedido</button>
     </form>
