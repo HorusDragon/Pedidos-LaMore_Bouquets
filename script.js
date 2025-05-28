@@ -60,7 +60,7 @@ if (tipoRamo === "mixto") {
 
   const nombre = document.getElementById("nombre").value;
   const mensaje = `Hola, soy ${nombre} y quiero pedir un ramo de ${cantidad} rosas.\n` +
-                  `Tipo de ramo: ${tipoTexto} \\n` +
+                  `Tipo de ramo: ${tipoTexto}\n` +
                   `Girasol: ${girasol}\n` +
                   `Billetes: ${billetes}\n` +
                   (frase ? `Cinta: "${frase}"\n` : "");
