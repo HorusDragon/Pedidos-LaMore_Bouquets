@@ -55,7 +55,7 @@ if (tipoRamo === "mixto") {
   const girasol = document.getElementById("girasol").checked ? "Sí" : "No";
   const billetesCheck = document.getElementById("billetesCheck").checked;
   const billetes = billetesCheck ? document.getElementById("billetes").value : "No";
-  const Corona = document.getElementById("corona").checked ? "Sí" : "No";
+  const corona = document.getElementById("corona").checked ? "Sí" : "No";
   const mariposas = document.getElementById("mariposas").checked ? "Sí" : "No";
   const pins = document.getElementById("Pins").checked ? "Sí" : "No";
   const cinta = document.getElementById("cinta").value;
