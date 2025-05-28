@@ -55,14 +55,21 @@ if (tipoRamo === "mixto") {
   const girasol = document.getElementById("girasol").checked ? "Sí" : "No";
   const billetesCheck = document.getElementById("billetesCheck").checked;
   const billetes = billetesCheck ? document.getElementById("billetes").value : "No";
+  const Corona = document.getElementById("corona").checked ? "Sí" : "No";
+  const mariposas = document.getElementById("mariposas").checked ? "Sí" : "No";
+  const pins = document.getElementById("Pins").checked ? "Sí" : "No";
   const cinta = document.getElementById("cinta").value;
   const frase = cinta === "si" ? document.getElementById("frase").value : "";
+ 
 
   const nombre = document.getElementById("nombre").value;
   const mensaje = `Hola, soy ${nombre} y quiero pedir un ramo de ${cantidad} rosas.\n` +
                   `Tipo de ramo: ${tipoTexto}\n` +
                   `Girasol: ${girasol}\n` +
                   `Billetes: ${billetes}\n` +
+                  `Corona: ${corona}\n` +
+                  `Mariposas: ${mariposas}\n` +
+                  `Pins de diamante: ${pins}\n` +
                   (frase ? `Cinta: "${frase}"\n` : "");
 
   const telefono = "525583303362"; // <-- Cambia este número
