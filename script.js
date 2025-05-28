@@ -3,6 +3,8 @@ function mostrarColores() {
   const tipo = parseInt(document.getElementById("tipoRamo").value);
   const container = document.getElementById("coloresContainer");
   container.innerHTML = "";
+  if (tipo === "mixto") return;
+  const cantidad = parseInt(tipo);
   const colores = ["rojo", "blanco", "rosa"];
   for (let i = 1; i <= tipo; i++) {
     const select = document.createElement("select");
@@ -33,15 +35,22 @@ document.getElementById("pedidoForm").addEventListener("submit", function (e) {
   e.preventDefault();
 
   const cantidad = document.getElementById("cantidad").value;
-  const tipoRamo = parseInt(document.getElementById("tipoRamo").value);
+const tipoRamo = document.getElementById("tipoRamo").value;
 
+let tipoTexto = "";
+if (tipoRamo === "mixto") {
+  tipoTexto = "mixto";
+} else {
+  const cantidadColores = parseInt(tipoRamo);
   const colores = [];
-  for (let i = 1; i <= tipoRamo; i++) {
+  for (let i = 1; i <= cantidadColores; i++) {
     const color = document.getElementById(`color${i}`);
     if (color) {
       colores.push(color.value);
     }
   }
+  tipoTexto = `${cantidadColores} colores (${colores.join(", ")})`;
+}
 
   const girasol = document.getElementById("girasol").checked ? "Sí" : "No";
   const billetesCheck = document.getElementById("billetesCheck").checked;
@@ -51,7 +60,7 @@ document.getElementById("pedidoForm").addEventListener("submit", function (e) {
 
   const nombre = document.getElementById("nombre").value;
   const mensaje = `Hola, soy ${nombre} y quiero pedir un ramo de ${cantidad} rosas.\n` +
-                  `Tipo de ramo: ${tipoRamo} colores (${colores.join(", ")})\n` +
+                  `Tipo de ramo: ${tipoTexto} \\n` +
                   `Girasol: ${girasol}\n` +
                   `Billetes: ${billetes}\n` +
                   (frase ? `Cinta: "${frase}"\n` : "");
