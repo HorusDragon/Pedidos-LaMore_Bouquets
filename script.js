@@ -72,7 +72,7 @@ if (tipoRamo === "mixto") {
                   `Pins de diamante: ${pins}\n` +
                   (frase ? `Cinta: "${frase}"\n` : "");
 
-  const telefono = "525583303362"; // <-- Cambia este número
+  const telefono = "16027771245"; // <-- Cambia este número
   const url = `https://wa.me/${telefono}?text=${encodeURIComponent(mensaje)}`;
 
   const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
